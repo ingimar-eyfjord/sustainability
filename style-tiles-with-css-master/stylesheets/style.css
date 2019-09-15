@@ -1,0 +1,304 @@
+/* change these */
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+*/
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tajawal&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* THIS IS ALL meant for editing. You might want to do it differently, name the variables differently, use the fonts in other ways in the font hierarchy etc. */
+
+/*:root {
+  --bg-color: #9f1c19;
+  --link-color: #65d1fb;
+  --link-hover-color: #ff8500;
+  --color-4: #05abeb;
+  --color-5: #ff241f;
+
+  --primary-font: 'Raleway', sans-serif;
+  --secondary-font: "Droid Serif", serif;
+  --main-text-color: #222222;
+
+  --white-space: 1rem;
+}
+*/
+
+:root {
+  --bg-color: #000;
+  --link-color: #ABC3DA;
+  --link-hover-color: #7C6A66;
+  --color-4: #000;
+  --color-5: #000;
+	
+/* --primary-font: 'Rajdhani', sans-serif;*/
+--primary-font:  'Tajawal', sans-serif;
+--secondary-font: 'Rajdhani', sans-serif;
+/*
+	--color1:#A17774;
+	--color2:#CEB4A9;
+	--color3:#585C5B;
+	--color4:#C3CEC8;
+	--color5:#EAE4E2;
+*/
+	
+	--color1:#ABC3DA;
+	--color2:#7F8989;
+	--color3:#505554;
+	--color4:#7C6A66;
+	--color5:#A9B2B0;
+
+ 
+  --main-text-color: #000;
+
+  --white-space: 1rem;
+}
+
+html {
+  font-size: 100%;
+  font-family: var(--primary-font);
+}
+
+header,
+main,
+footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: calc(2*var(--white-space));
+}
+heder h1{
+	letter-spacing: 2em;
+	font-family: var(--primary-font);}
+
+.full-width {
+  background: var(--color1);
+  color: white;
+  width: 100%
+}
+
+.header-wrapper h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding-right: .75em;
+  font-weight: bold;
+  color: white;
+}
+
+.header-wrapper h2 {
+  font-size: 1.6em;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  margin: var(--white-space) 0;
+}
+
+.header-wrapper h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.header-wrapper h4 {
+  font-size: 0.8rem;
+}
+
+main {
+  padding: calc(2*var(--white-space));
+}
+
+section {
+  margin-bottom: calc(2*var(--white-space));
+}
+
+.section-heading {
+  font-family: var(--primary-font);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #777;
+  margin: .5rem 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swatches li {
+  margin-right: 5vw;
+  height: 15vw;
+  width: 20%;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.color-swatch-1 {
+  background-color: var(--color1);
+}
+
+.color-swatch-2 {
+  background-color: var(--color2);
+}
+
+.color-swatch-3 {
+  background-color: var(--color3);
+}
+
+.color-swatch-4 {
+  background-color: var(--color4);
+}
+
+.color-swatch-5 {
+  background-color: var(--color5);
+}
+
+.textures li {
+  height: 30vw;
+  width: 40%;
+  margin-right: 5vw;
+}
+
+.texture-swatch-1 {
+  background: url(../img/hemp-fabric-texture.jpg) top left repeat;
+	background-size: 200%;
+}
+
+.texture-swatch-2 {
+  background: url("../img/log-texture.jpg") top left repeat;
+	background-size: 150%;
+}
+
+.texture-swatch-3 {
+  background: url("../img/concrete-texture.jpg") top left repeat;
+	background-size: contain;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 4px;
+  background: var(--link-color);
+  text-align: center;
+  text-decoration: none;
+  font: bold 1.25em/1 "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px -1px 0px #0374a0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 0 1rem 1rem 0;
+}
+
+.secondary-button {
+  background: var(--color-5);
+}
+
+button:focus,
+button:active,
+button:focus-within {
+  outline: 0;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--link-hover-color);
+  /*opacity: 0.5;*/
+}
+
+button:active {
+  background-color: var(--bg-color);
+}
+
+.typography-main {
+  color: var(--main-text-color);
+}
+
+.h1-sample {
+  font-size: 2.4rem;
+  font-weight: bold;
+	color: var(--color3);
+}
+
+.h2-sample {
+  font-family: var(--secondary-font);
+	color: var(--color2);
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+p.typography-sample {
+  font-family: var(--secondary-font);
+  line-height: 1.5;
+  max-width: 960px;
+	color:var(--color3);
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  font-family: var(--primary-font);
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+p[class*="font-details-"] {
+  margin-top: .5rem;
+  margin-bottom: calc(2*var(--white-space));
+  font-size: 0.75rem;
+  font-family: var(--secondary-font);
+  color: #6f6f6f;
+}
+
+.adjectives ul {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.adjectives ul {
+  flex-direction: row;
+	justify-content: space-between;
+}
+
+footer {
+  font-style: italic;
+}
+
+@media (min-width:800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  .swatches li {
+    margin-right: 3%;
+    height: 10vw;
+    width: 20%;
+  }
+
+  .textures li {
+    height: 15vw;
+  }
+}
+
+@media (min-width:900px) {
+  .adjectives ul {
+    flex-direction: row;
+  }
+}

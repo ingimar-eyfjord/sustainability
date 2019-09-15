@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tajawal&display=swap');
+:root {
+  --bg-color: #000;
+  --link-color: #ABC3DA;
+  --link-hover-color: #7C6A66;
+  --color-4: #000;
+  --color-5: #000;
+	
+/* --primary-font: 'Rajdhani', sans-serif;*/
+--primary-font:  'Tajawal', sans-serif;
+--secondary-font: 'Rajdhani', sans-serif;
+--fontsizeongraphics: 4em;
+	--color1:#ABC3DA;
+	--color2:#7F8989;
+	--color3:#505554;
+	--color4:#7C6A66;
+	--color5:#A9B2B0;
+}
+body{padding: 0;
+	margin:0;}
+
+h2{font-family: var(--secondary-font);}
+
+p{ font-family: var(--secondary-font);}
+.slider p{font-family: var(--secondary-font);}
+	
+}
+.displaynone{
+	display: none;
+}
+
+/* Main page */
+.mainpagelayout{
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 60vh auto auto auto;
+	position: relative;
+}
+.categoryselction{
+	grid-row: 2;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	margin-top: 0.2em;}
+
+.categoryselector{
+	width: 20vw;
+	overflow-y: hidden;
+	border: white;
+	border-style: solid;
+	border-width: 0.2em;
+	
+}
+.categoryselction a{
+	overflow: hidden;
+	text-align: center;
+}
+.categoryselction a img{
+	width: 20vw;
+	height: auto;
+	opacity: 0.8;
+}
+.categoryname{
+	z-index: 10;
+	top: 0;
+	left: 0;
+	font-size: var(--fontsizeongraphics);
+	color: aliceblue;
+	transform: translateY(-400%);
+}
+/* Restaurant body*/
+.restaurantBody{
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 80vh auto auto auto;
+	position: relative;
+}
+
+.displaynone{
+	display: none;
+}
+
+
+.showclientcards{
+	grid-row: 2;
+	grid-column: span 4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+.clientcard{
+	margin: 1em;
+	width: 20vw;
+	height: auto;
+	display: block;
+	background-color: lightblue;
+	display: grid;
+	position: relative;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2fr 0.25fr 0.25fr 0.25fr 0.25fr;
+}
+
+/*
+.clientcardShowmore{
+	width: 20vw;
+	height: 170vh;
+	position: absolute;
+}
+*/
+
+.clientlogo{
+	grid-column-start: 1;
+	grid-column-end: span 2;
+	grid-row: 1;
+}
+.clientlogo img{
+	width: 20vw;
+	height: auto;
+}
+.clientname{
+	position: absolute;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 2;
+	line-height: 0em;
+	padding-left: 0.3em;
+}
+.clientshortinfo{
+	position: absolute;
+	white-space: nowrap;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row: 3;
+	padding-left: 0.4em;
+	line-height: 0em;
+}
+.clientlocationMaps{
+	position: absolute;
+	grid-column: 2;
+	grid-row: 2; 
+	margin-top: 0.5em;
+	margin-right: 1.5em;
+	justify-self:end;
+}
+.clientlocationMaps img{
+	position: absolute;
+	width: 1em;
+	height: auto;
+}
+.clientlocation{
+	position: absolute;
+	grid-column: 2;
+	grid-row: 3;
+	line-height: 0em;
+	margin-right: 0.5em;
+	justify-self:end;
+}
+.stars{
+	position: absolute;
+	grid-column: 2;
+	grid-row:4;
+	line-height: 0em;
+	margin-top: 0.5em;
+	margin-right:0.5em;
+	justify-self:end;
+}
+.stars img{
+	width: 5vw;
+	height: auto;
+}
+.iconidentifiers{
+	grid-column: span 2;
+	grid-row: 5;
+	margin-left: 0.4em;
+	padding-top:0.5em;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.iconidentifiers img{
+	height: 2em;
+	width:auto;
+}
+.showmore{
+	color: white;
+	text-align: center;
+	display: block;
+	width: 20vw;
+	height: 5vh;
+	line-height: 0;
+	margin-top: 1em;
+	grid-row: 6;
+	background-color: black;
+}
+
+/** slider */
+
+.slider {
+ display: block;
+ width: 100%;
+ height: 60vh;
+ background-color: #1f1f1f;
+ overflow: hidden;
+ position: absolute;
+}
+
+.slider > * {
+ position: absolute;
+ display: block;
+ width: 100%;
+ height: 100%;
+ background: #1f1f1f;
+ animation: slide 15s infinite;
+ overflow: hidden;
+}
+
+
+slide:nth-child(1){
+ left: 0%;
+ animation-delay: -1s;
+ background-image: url("media/slideshow/restaurant.jpeg");
+ background-size: cover;
+ background-position:top;
+}
+
+slide:nth-child(2){
+ animation-delay: 2s;
+ background-image: url("media/slideshow/fashion.jpg");
+ background-size: cover;
+ background-position:top;
+}
+
+slide:nth-child(3){
+ animation-delay: 5s;
+ background-image: url("media/slideshow/furniture.jpg");
+ background-size: cover;
+  background-position:top;
+}
+
+slide:nth-child(4){
+ left: 0%;
+ animation-delay: 8s;
+ background-image: url("media/slideshow/goceries.jpg");
+ background-size: cover;
+ background-position:top;
+}
+slide:nth-child(5){
+ left: 0%;
+ animation-delay: 11s;
+ background-image: url("media/slideshow/firstslide.jpg");
+ background-size: cover;
+ background-position:top;
+}
+
+slide p {
+ font-size:3em;
+ text-align: center;
+ display: inline-block;
+	margin-top: 40vh;
+	margin-left: 5vw;
+ color:black;
+	background-color: white;
+text-shadow: 1px 1px whitesmoke;
+}
+
+@keyframes slide {
+ 0% { left: 100%; width: 100%; }
+ 5% { left: 0%; }
+ 25% { left: 0%; }
+ 30% { left: -100%; width: 100%; }
+ 30.0001% { left: -100%; width: 0%; }
+ 100% { left: 100%; width: 0%; }
+}
