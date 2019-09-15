@@ -81,10 +81,20 @@ p{ font-family: var(--secondary-font);}
 .aboutusHomepagebanner{
 	grid-row: 4;
 	grid-column: 2;
+	position: relative;
 }
 .aboutusHomepagebanner article img{
 	width: 50vw;
-	height: auto;
+	height: auto;}
+.aboutusHomepagebanner h2{
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: var(--fontsizeongraphics);
+	transform: translate(20vw, 25vh);
+	
 }
 /* Restaurant body*/
 .restaurantBody{
@@ -114,7 +124,6 @@ p{ font-family: var(--secondary-font);}
 	margin: 1em;
 	width: 20vw;
 	height: auto;
-	display: block;
 	background-color: lightblue;
 	display: grid;
 	position: relative;
