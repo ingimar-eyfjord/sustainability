@@ -35,14 +35,15 @@ p{ font-family: var(--secondary-font);}
 /* Main page */
 .mainpagelayout{
 	display: grid;
-	width: 100%;
+	max-width: 100vw;
 	height: 100%;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 50vw 50vw;
 	grid-template-rows: 60vh auto auto auto;
 	position: relative;
 }
 .categoryselction{
 	grid-row: 2;
+	grid-column: span 2;
 	display: flex;
 	flex-flow: row;
 	justify-content: space-between;
@@ -54,6 +55,7 @@ p{ font-family: var(--secondary-font);}
 	border: white;
 	border-style: solid;
 	border-width: 0.2em;
+	position: relative;
 	
 }
 .categoryselction a{
@@ -66,12 +68,23 @@ p{ font-family: var(--secondary-font);}
 	opacity: 0.8;
 }
 .categoryname{
-	z-index: 10;
+	z-index: 1000;
 	top: 0;
 	left: 0;
 	font-size: var(--fontsizeongraphics);
 	color: aliceblue;
-	transform: translateY(-400%);
+	position: absolute;
+	text-align: center;
+	margin-top: 25vh;
+	margin-left: 3vw;
+}
+.aboutusHomepagebanner{
+	grid-row: 4;
+	grid-column: 2;
+}
+.aboutusHomepagebanner article img{
+	width: 50vw;
+	height: auto;
 }
 /* Restaurant body*/
 .restaurantBody{
@@ -108,7 +121,6 @@ p{ font-family: var(--secondary-font);}
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 2fr 0.25fr 0.25fr 0.25fr 0.25fr;
 }
-
 /*
 .clientcardShowmore{
 	width: 20vw;
