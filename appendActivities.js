@@ -58,9 +58,9 @@ function showName(nameData){
   }
   NonPolluting()
 	
-		function appendInactivites(){
-		if(nameData.gsx$category.$t === "activites")
-		document.querySelector("article.activites").appendChild(copy);
+		function appendInactivities(){
+		if(nameData.gsx$category.$t === "activities")
+		document.querySelector("article.activities").appendChild(copy);
 	}
-	appendInactivites()// JavaScript Document
+	appendInactivities()// JavaScript Document
 }
