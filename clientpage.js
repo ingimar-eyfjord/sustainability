@@ -1,6 +1,10 @@
+// JavaScript Document
+
 const link =
   "https://spreadsheets.google.com/feeds/list/1kbHDE_BG8qb5t72fitcdg4PbMjENz7fVTgHCjb12ScI/od6/public/values?alt=json";
 window.addEventListener("load", getData);
+
+
 
 function getData() {
   fetch(link)
@@ -13,19 +17,17 @@ function showData(data){
 
 function showName(nameData){
 	const template = document.querySelector("template").content;
-	const copy = template.cloneNode(true);
-	console.log(nameData)
-	copy.querySelector(".clientname").textContent=nameData.gsx$name.$t;
-//	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
-	copy.querySelector(".clientlogo img").src = `media/clientslogos/${nameData.gsx$imgname.$t}.jpg`;
+	const copy = template.cloneNode(true);	
+	copy.querySelector(".clientnamefullpage").textContent=nameData.gsx$name.$t;
+	copy.querySelector(".clientshortdescription p").textContent=nameData.gsx$type.$t;
+	copy.querySelector(".clientfullLongdescription").textContent=nameData.gsx$longdescription.$t;
+	copy.querySelector(".clientbannarimage img").src = `media/clientlandingpageimage/${nameData.gsx$clientbanners.$t}.png`;
 	
-	var a = copy.querySelector(".showmore a"); 
-	a.href = `showProduct.html?id=${nameData.gsx$id.$t}`;
 	
-	function vegan() {
+		function vegan() {
     if (nameData.gsx$vegan.$t === "1") {
 		copy.querySelector(".vegan").style.display = "block";
-//      copy.querySelector(".vegan img").src = `media/icons/vegan.png`;
+
     }
   }
   vegan()
@@ -33,35 +35,42 @@ function showName(nameData){
 	function zeroWaste() {
     if (nameData.gsx$zerowaste.$t === "1") {
 		copy.querySelector(".zeroWaste").style.display = "block";
-//      copy.querySelector(".vegan img").src = `media/icons/vegan.png`;
+
     }
   }
   zeroWaste()
 		function organic() {
     if (nameData.gsx$organic.$t === "1") {
 		copy.querySelector(".organic").style.display = "block";
-//      copy.querySelector(".vegan img").src = `media/icons/vegan.png`;
+
     }
   }
   organic()
 		function raw() {
     if (nameData.gsx$raw.$t === "1") {
 		copy.querySelector(".raw").style.display = "block";
-//      copy.querySelector(".vegan img").src = `media/icons/vegan.png`;
     }
   }
   raw()
 		function NonPolluting() {
     if (nameData.gsx$nonpolluting.$t === "1") {
 		copy.querySelector(".NonPolluting").style.display = "block";
-//      copy.querySelector(".vegan img").src = `media/icons/vegan.png`;
     }
   }
   NonPolluting()
 	
-		function appendIngroceries(){
-		if(nameData.gsx$category.$t === "groceries")
-		document.querySelector("article.groceries").appendChild(copy);
+	
+	
+//	window.onload = function() {
+//			try {
+				var url_string = (window.location.href).toLowerCase();
+				var url = new URL(url_string);
+        		var id = url.searchParams.get("id");
+				console.log(id);
+
+
+	function appendInrestaurants(){
+		if(nameData.gsx$id.$t === id)
+		document.querySelector(".pagelayout").appendChild(copy);
 	}
-	appendIngroceries()// JavaScript Document
-}
+	appendInrestaurants()}// JavaScript Document

@@ -18,42 +18,11 @@ function showName(nameData){
 	copy.querySelector(".clientname").textContent=nameData.gsx$name.$t;
 	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
 	copy.querySelector(".clientlogo img").src = `media/clientslogos/${nameData.gsx$imgname.$t}.jpg`;
-//	
-//	function  initMap(){
-//	var location = {lat: -25.363, lng: 131.044};
-//	var map = new google.maps.Map(copy.querySelector(".maps"),{
-//		zoom: 4,
-//		center: location
-//	});
-//	var marker = new google.maps.Marker({
-//		position: location, 
-//		map: map
-//	});
-//		copy.querySelector(".maps").appendChild(copy);
-//}
-//	
-	
-//	const Mapmodal = copy.querySelector(".maps");
-//	Mapmodal.addEventListener("click", () => {
-//		Mapmodal.classList.add("displaynone");
-//});
-//function showMap(map) {
-//  //...
-//  copy.querySelector(".clientlocationMaps").addEventListener("click", () => {nameData.gsx$lat.$t,nameData.gsx$lng.$t
-//	function initMap(){
-//		var location = {lat: -25.363, lng: 131.044};
-//		  console.log(nameData.gsx$lat.$t)
-//		var map = new google.maps.Map(copy.getElementById("map"),{
-//		zoom: 4,
-//		center: location
-//	});
-//	var marker = new google.maps.Marker({
-//		position: location, 
-//		map: map
-//	});}
-//	  Mapmodal.classList.remove("hide");
-//}});
-
+//	console.log (`showProduct.html?id=${nameData.gsx$id.$t}`);
+//	copy.querySelector("a").href = `showProduct.html/?${nameData.gsx$id.$t}`;
+//	copy.querySelector("a").setAttribute('href', 'showProduct.html?id=' + nameData.gsx$id.$t);
+	var a = copy.querySelector(".showmore a"); 
+	a.href = `showProduct.html?id=${nameData.gsx$id.$t}`;
 	
 	function vegan() {
     if (nameData.gsx$vegan.$t === "1") {
@@ -105,7 +74,5 @@ function showName(nameData){
 		document.querySelector("article.restaurants").appendChild(copy);
 	}
 	appendInrestaurants()// JavaScript Document
-
-
 }
 //Todo I need a toggle fucntion on the buttons. and do a sort field.

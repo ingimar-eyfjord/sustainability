@@ -11,6 +11,7 @@
 	
 /* --primary-font: 'Rajdhani', sans-serif;*/
 --primary-font:  'Tajawal', sans-serif;
+--primary-gont-extraThick: 'Tajawal 700', sans-serif;
 --secondary-font: 'Rajdhani', sans-serif;
 --fontsizeongraphics: 4em;
 	--color1:#ABC3DA;
@@ -26,9 +27,13 @@ background-color: var(--color5);}
 h2{font-family: var(--secondary-font);}
 
 p{ font-family: var(--secondary-font);}
-.slider p{font-family: var(--secondary-font);}
+.slider p{font-family: var(--primary-gont-extraThick);
+font-size: 5em;}
 a{color:white;
 	text-decoration: none;
+}
+li{
+	font-family: var(--primary-font)
 }
 	
 nav{position: absolute;
@@ -214,6 +219,7 @@ nav ul li{
 	grid-column: 1;
 	font-family: var(--secondary-font);
 	margin-bottom: 1em;
+	margin-top: 0;
 	margin-left: 2em;
 }
 .mainadbanner h4{
@@ -252,7 +258,7 @@ nav ul li{
 .newsletterbanner{
 	grid-row: 6;
 	width: 100vw;
-	height: 60vh;
+	height: 40vh;
 	display: grid;
 	grid-template-columns: 50vw 50vw;
 	grid-template-rows: 15vh 15vh 15vh 15vh;
@@ -262,7 +268,7 @@ nav ul li{
 }
 .newsletteremail{
 	grid-column: 2;
-	grid-row: 3;
+	grid-row: 2;
 	justify-self:center;
 	padding-top: 1.5em;
 }
@@ -274,7 +280,7 @@ nav ul li{
 	font-size: 1em;
 	grid-column: 2;
 	grid-row: 1;
-	padding-top: 1em;
+	padding-top: 0em;
 	width: 30vw;
 	justify-self:center;
 	text-align: center;
@@ -291,7 +297,7 @@ nav ul li{
 	justify-content: center;
 }
 .submitemail{
-	grid-row: 4;
+	grid-row: 3;
 	grid-column: 2;
 	text-align: center;
 	width: 20vw;
@@ -351,7 +357,7 @@ nav ul li{
 	margin: 1em;
 	width: 20vw;
 	height: auto;
-	background-color: lightblue;
+	background-color: var(--color1);
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
@@ -451,7 +457,7 @@ nav ul li{
 	line-height: 0;
 	margin-top: 1em;
 	grid-row: 6;
-	background-color: black;
+	background-color: var(--color2);
 }
 
 /** slider */
@@ -519,9 +525,9 @@ slide p {
  display: inline-block;
 	margin-top: 40vh;
 	margin-left: 5vw;
- color:black;
-	background-color: white;
-text-shadow: 1px 1px whitesmoke;
+ color:white;
+font-weight: bold;
+text-shadow: 1px 1px black;
 }
 
 @keyframes slide {
@@ -681,4 +687,122 @@ footer ul{
 	grid-row:3;
 	margin-right: 10em;
 	position: absolute;
+}
+
+/* client landing page*/
+
+.showclientfullinfo{
+	width: 100vw;
+	height: 150vh;
+	position: relative;
+	display:grid;
+	grid-template-columns: 10vw 30vw 10vw 40vw 10vw;
+	grid-template-rows: 25vh 25vh 20vh 20vh 25vh;
+}
+
+.clientbannarimage{
+	height: 50vh;
+	width: 100vw;
+	overflow: hidden;
+	grid-row: span 2;
+	grid-column: span 4;
+}
+.clientbannarimage img{
+	height: auto;
+	width: 100vw;
+	transform: translateY(-40vh)
+}
+.clientnamefullpage{
+	text-align: left;
+	grid-row: 3;
+	grid-column: 2;
+	font-size: 4vw;
+	padding: 0;	
+}
+.clientshortstarsicon{text-align: left;
+	grid-row: 4;
+	grid-column: 2;
+	display: flex;
+	flex-flow: column;}
+
+.clientshortdescription{	
+	font-size: 1.5vw;
+}
+.clientstars{
+max-width: 20vw;
+	height: auto;
+}
+.iconidentifyersfull{
+	margin-top: 5vh;
+	max-width: 15vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+}
+.iconidentifyersfull img{
+	width: auto;
+	height: 3vw;
+	max-width: 5vw;
+
+}
+.clientfullLongdescription{
+	grid-column: 4;
+	grid-row-start: 3;
+	grid-row-end: span 4;
+	font-size: 1.5vw;
+	margin-top: 0.8vw;
+	font-family: var(--primary-font);
+}
+.clientfullLongdescription p{
+	font-family: var(--primary-font);
+}
+.visitwebpage{
+	text-align: center;
+	width: 20vw;
+	height: 10vh;
+	color: black;
+	background-color: white;
+	grid-row:5;
+	grid-column: 4;
+	border-radius: 20vw;
+	justify-self:center;
+	display: flex;
+	justify-content: center;
+}
+.visitwebpage h2{
+	font-size: 2vw;
+	margin-right: 0;
+	text-align: center;
+	color: var(--color4);
+}
+.maps{
+	width: 40vw;
+	height: 50vh;
+	display: block;
+	background-color: blue;
+	grid-row: 6;
+}
+.adresses{
+	width: 60vw;
+	height: 50vh;
+	display: block;
+	background-color: var(--color2);
+	grid-row: 6;
+	grid-column:3;
+	grid-column-end: 7;
+}
+.adresses p{
+	text-align: center;
+	font-size: 2vw;
+}
+.reviewsaboutplace{
+	width: 100vw;
+	height: 30vh;
+	display: block;
+	background-color: white;
+	grid-row: 7;
+	
 }

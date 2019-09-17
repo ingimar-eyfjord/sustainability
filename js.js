@@ -19,70 +19,41 @@ function  initMap(){
 	});
 }
 
-function filterselection(c){
+var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+var allPlayers = Array.from(document.querySelectorAll('.clientcardfilter'));
+var checked = {};
 
-	var x, i;
-	x = document.getElementsByClassName("clientcardfilter");
-	if(c == "all") c = " ";
-	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-	for (i = 0; i < x.length; i++){
-		w3Removeclass(x[i], "show");
-		if (x[i].className.indexOf(c) > -1) w3Addclass(x[i], "show");
-	}
-}
-function w3Addclass(element, name){
-	console.log(element)
-	var i, arr1, arr2;
-	arr1 = element.className.split(", ");
-	console.log(arr1)
-	arr2 = name.split(" ");
-	// Lasse added this I think, makes it work.
-	
-//	if (element ==! hasClass.name)
-	
-	
-	
-	element.classList.toggle(name);
-	
-	
-	
-	
-//	console.log(arr2.length)
-//	
-//	for (i = 0; i < arr2.lenght; i++){
-//		console.log('hello' + arr1.indexOf(arr2[i]));
-//		if (arr1.indexOf(arr2[i]) == -1){
-//		element.className += " " + arr2[i];
-//			
-//		}
-//	}
+getChecked('vegan');
+getChecked('Raw');
+getChecked('Organic');
+getChecked('NonPolluting');
+
+Array.prototype.forEach.call(allCheckboxes, function (el) {
+  el.addEventListener('change', toggleCheckbox);
+});
+
+function toggleCheckbox(e) {
+  getChecked(e.target.name);
+  setVisibility();
 }
 
-// Hide elements that are not selected
-function w3Removeclass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(", ");
-  arr2 = name.split(" ");
-	//
-	element.classList.remove(name);
-	//
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
+function getChecked(name) {
+  checked[name] = Array.from(document.querySelectorAll('input[name=' + name + ']:checked')).map(function (el) {
+    return el.value;
+  });
+}
+
+function setVisibility() {
+  allPlayers.map(function (el) {
+    var vegan = checked.vegan.length ? _.intersection(Array.from(el.classList), checked.vegan).length : true;
+    var organic = checked.organic.length ? _.intersection(Array.from(el.classList), checked.organic).length : true;
+    var raw = checked.raw.length ? _.intersection(Array.from(el.classList), checked.raw).length : true;
+    var NonPolluting = checked.NonPolluting.length ? _.intersection(Array.from(el.classList), checked.NonPolluting).length : true;
+    if (vegan && organic && raw && NonPolluting) {
+      el.style.display = 'block';
+    } else {
+      el.style.display = 'none';
     }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById("categorycheckbox");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-	 //check if 
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", ", ");
-    this.className += "active";
   });
 }
 

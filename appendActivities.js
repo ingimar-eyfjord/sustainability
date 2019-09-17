@@ -21,6 +21,9 @@ function showName(nameData){
 //	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
 	copy.querySelector(".clientlogo img").src = `media/clientslogos/${nameData.gsx$imgname.$t}.jpg`;
 	
+	var a = copy.querySelector(".showmore a"); 
+	a.href = `showProduct.html?id=${nameData.gsx$id.$t}`;
+	
 	function vegan() {
     if (nameData.gsx$vegan.$t === "1") {
 		copy.querySelector(".vegan").style.display = "block";
