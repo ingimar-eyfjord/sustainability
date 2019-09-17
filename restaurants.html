@@ -14,12 +14,16 @@
 	<input class="btn" type="checkbox" onClick="filterselection('vegan')" name="Vegan">Vegan<br>
 	<input  class="btn" type="checkbox" onClick="filterselection('raw')" name="Raw">Raw<br>
 	<input class="btn"  type="checkbox" onClick="filterselection('organic')" name="Organic">Organic<br></section>
-<article class="showclientcards restaurants">
+
+		<article class="showclientcards restaurants">
 
 </article>
 	
+		
+		
 		<template>
-			<div class="clientcardfilter">
+			
+			<div class="clientcardfilter displaynone">
 	<section class="clientcard">
     <div class="clientlogo"><img width="400" height="400" alt=""/> </div>
 	<h2 class="clientname">42 RAW</h2>
@@ -34,7 +38,7 @@
 	<div class="zeroWaste displaynone"><img src="media/icons/zeroWaste.png" width="87" height="106" alt=""/></div>
 	<div class="NonPolluting displaynone"><img src="media/icons/nonPolluting.png" width="87" height="106" alt=""/></div>
 	</div>
-	<div class="showmore" onclick="showmore(event)"><h2>SHOW MORE</h2></div>
+	<div class="showmore" onclick="showmore(event)"><a href="42RAW.html"><h2>SHOW MORE</h2></a></div>
 	</section>
 	</div>
 	</template>
@@ -88,5 +92,6 @@
 	  </footer>
 <script type="text/javascript" src="js.js"></script>	
 <script type="text/javascript" src="appendRestaurant.js"></script>	
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIt4h7e-Bhxw0z7QKVQW34jqcb8lMW8r0&callback=initMap"> </script>
 </body>
 </html>
