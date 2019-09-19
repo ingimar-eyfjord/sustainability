@@ -13,7 +13,7 @@
 --primary-font:  'Tajawal', sans-serif;
 --primary-gont-extraThick: 'Tajawal 700', sans-serif;
 --secondary-font: 'Rajdhani', sans-serif;
---fontsizeongraphics: 4em;
+--fontsizeongraphics: 3vw;
 	--color1:#ABC3DA;
 	--color2:#7F8989;
 	--color3:#505554;
@@ -43,11 +43,11 @@ top:0;
 	font-family: var(--primary-font);
 	color: var(--color3);
 	z-index: 99999;
-font-size: 3em;
+font-size: 3.3vw;
 	display: flex;
 	flex-flow: row;
 	justify-content: flex-start;
-	margin-top:-0.9em;
+	margin-top: 0vh;
 	margin-left: 0em;
 	text-align: left;
 }
@@ -157,25 +157,25 @@ nav ul li{
 	grid-column-start: 3;
 	grid-column-end: span 4;
 	grid-row: 1;
-	margin-right: 1em;
-	font-size: 5em;
+	margin-right: 6vw;
+	font-size: 5vw;
 	text-align: right;
 	font-family: var(--primary-font);
 }
 .aboutusShowmore h3{
 	grid-column-start: 3;
 	grid-column-end: span 4;
-	margin-right: 3em;
+	margin-right: 6vw;
 	grid-row: 3;
 	color: aliceblue;
-	font-size: 2em;
+	font-size: 2vw;
 	text-align: right;
 	font-family: var(--primary-font);
 }
 .aboutshowmorebutton{
 	text-align: center;
 	width: 20vw;
-	height: 10vh;
+	height: 7vh;
 	color: black;
 	background-color: white;
 	grid-row:5;
@@ -185,10 +185,13 @@ nav ul li{
 	display: flex;
 	justify-content: center;
 	transform:translateY(-1em);
+    margin-right: 1vw;
+
+
 }
 .aboutshowmorebutton h2{
-	font-size: 3em;
-	line-height: 0.5em;
+	font-size: 3vw;
+	line-height: 0.5vh;
 	margin-right: 0;
 	text-align: center;
 	color: var(--color4);
@@ -201,34 +204,33 @@ nav ul li{
 	grid-row: 5;
 	background-color: var(--color3);
 	grid-template-areas: 50vw 50vw;
-	grid-template-row: 20vh 20vh 20vh 20vh; 
-	padding-bottom: 5em;
+	grid-template-rows: 20vh 20vh 20vh 20vh;
+	padding-bottom: 1vh;
 }
 .mainadbanner h2{
 	color: white;
-	font-size: 5em;
+	font-size: 5vw;
 	grid-row: 1;
 	grid-column: 1;
-	margin-left: 2em;
+	margin-left: 6vw;
 	font-family: var(--primary-font);
 }
 .mainadbanner h3{
 	color: white;
-	font-size: 5em;
+	font-size: 4vw;
 	grid-row: 2;
 	grid-column: 1;
 	font-family: var(--secondary-font);
-	margin-bottom: 1em;
-	margin-top: 0;
-	margin-left: 2em;
+	margin-bottom: 5vh;
+	margin-left: 6vw;
 }
 .mainadbanner h4{
 	color: white;
-	font-size: 5em;
+	font-size: 3vw;
 	grid-row: 3;
 	grid-column: 1;
-	margin-left: 2em;
-	margin-right: 2em;
+	margin-left: 6vw;
+	margin-right: 6vw;
 	font-family: var(--primary-font);
 	margin-bottom: 0;
 	margin-top: 0;
@@ -236,21 +238,21 @@ nav ul li{
 .mainaddshowmorebutton{
 	text-align: center;
 	width: 20vw;
-	height: 10vh;
+	height: 7vh;
 	color: black;
 	background-color: white;
 	grid-row:4;
 	grid-column: 1;
 	border-radius: 20vw;
 	justify-self:left;
-	margin-left: 10em;
+	margin-left: 6vw;
 	display: flex;
-	margin-top: 4em;
+	margin-top: 6vw;
 	justify-content: center;
 }
 .mainaddshowmorebutton h2{
-	font-size: 3em;
-	line-height: 0.5em;
+	font-size: 3vw;
+	line-height: 0.5vw;
 	margin-left: 0;
 	text-align: center;
 	color: var(--color4);}
@@ -263,24 +265,25 @@ nav ul li{
 	grid-template-columns: 50vw 50vw;
 	grid-template-rows: 15vh 15vh 15vh 15vh;
 	color: white;
-	font-size: 3em;
+	font-size: 3vw;
 	text-align: center;
+
 }
 .newsletteremail{
 	grid-column: 2;
 	grid-row: 2;
 	justify-self:center;
-	padding-top: 1.5em;
+	padding-top: 2vh;
 }
 .newsletterbanner h2{
-	margin-left: 2.3em;
+	margin-left: 6vw;;
 	text-align: left;
 }
 .newsletterbanner p{
-	font-size: 1em;
+	font-size: 2.5vw;
 	grid-column: 2;
 	grid-row: 1;
-	padding-top: 0em;
+	padding-top: 2vh;
 	width: 30vw;
 	justify-self:center;
 	text-align: center;
@@ -305,12 +308,12 @@ nav ul li{
 	color: var(--color4);
 	border-radius: 20vw;
 	display: flex;
-	margin-top: 0.5em;
+	margin-top: 1vh;
 	justify-content: center;
 	justify-self:center;
 }
 .submitemail h2{
-	font-size: 1em;
+	font-size: 4vw;
 	margin:0;
 	font-family: var(--primary-font)
 }
@@ -349,6 +352,7 @@ nav ul li{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+
 	
 }
 .clientcardfilter{
@@ -361,7 +365,7 @@ nav ul li{
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 2fr 0.25fr 0.25fr 0.25fr 0.25fr;
+	grid-template-rows:0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
 	
 }
 /*
@@ -376,6 +380,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: span 2;
 	grid-row: 1;
+    max-height: 20vw;
 }
 .clientlogo img{
 	width: 20vw;
@@ -386,7 +391,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row: 2;
-	font-size: 2em;
+	font-size: 2vw;
 	line-height: 0em;
 	padding-left: 0.3em;
 }
@@ -396,7 +401,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row: 3;
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	padding-left: 0.4em;
 	line-height: 0em;
 }
@@ -421,6 +426,7 @@ nav ul li{
 	white-space:normal;
 	margin-right: 0.5em;
 	justify-self:end;
+    font-size: 1.5vw;
 }
 .stars{
 	position: absolute;
@@ -443,21 +449,30 @@ nav ul li{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+
 }
 .iconidentifiers img{
-	height: 5em;
+	height: 5vh;
 	width:auto;
+    max-height: 5vw;
 }
 .showmore{
 	color: white;
 	text-align: center;
-	display: block;
+	display: inline-flex;
 	width: 20vw;
-	height: 5vh;
+	height: 6vh;
 	line-height: 0;
-	margin-top: 1em;
+	margin-top: 1.5vh;
 	grid-row: 6;
-	background-color: var(--color2);
+	background-color: black;
+   justify-content: center;
+}
+
+.showmore>h2{
+    font-size: 3.5vw;
+    align-self: center;
+    vertical-align: middle;
 }
 
 /** slider */
@@ -520,7 +535,7 @@ slide:nth-child(5){
 }
 
 slide p {
- font-size:3em;
+ font-size:5vw;
  text-align: center;
  display: inline-block;
 	margin-top: 40vh;
@@ -623,36 +638,40 @@ grid-template-rows: 1fr 1fr;
 bottom: 0;
 grid-row: 10;
 grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 .footersection{
 	grid-row: 1;
-	margin-left: 6em;
+	margin-left: 4.5vw;
 	text-align: left;
-	margin-top: 3em;
+	margin-top: 2vh;
 }
 .footerheader{
-	margin-left: 1.6em;
+	margin-left: 2vw;
 }
 .socialmediaicons{
 	position: absolute;
 grid-row: 2;
 width: 50vw;
 	height: 10vh;
-	margin-left: 2em;
-	padding-top: 4em;
+	margin-left: 3vh;
+	padding-top: 4vh;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 .socialmediaicons img{
-height: 3em;
+height: 5vh;
 width: auto;
 }
 footer ul{
 	text-align: left;
-	font-size: 1.5em;
+	font-size: 2vw;
 	list-style: none;
-	line-height: 2em;
+	line-height: 4vw;
+    font-family: var(--secondary-font);
+    padding-left: 2vw;
+
 }
 
 
