@@ -158,7 +158,7 @@ nav ul li{
 	grid-column-end: span 4;
 	grid-row: 1;
 	margin-right: 6vw;
-	font-size: 5vw;
+	font-size: 4vw;
 	text-align: right;
 	font-family: var(--primary-font);
 }
@@ -182,7 +182,7 @@ nav ul li{
 	grid-column: 4;
 	border-radius: 20vw;
 	justify-self:right;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	transform:translateY(-1em);
     margin-right: 1vw;
@@ -191,8 +191,9 @@ nav ul li{
 }
 .aboutshowmorebutton h2{
 	font-size: 3vw;
-	line-height: 0.5vh;
+	line-height: 0;
 	margin-right: 0;
+	margin-top: 3.5vh;
 	text-align: center;
 	color: var(--color4);
 	
@@ -246,14 +247,16 @@ nav ul li{
 	border-radius: 20vw;
 	justify-self:left;
 	margin-left: 6vw;
-	display: flex;
+	display: inline-flex;
+	align-items: baseline;
 	margin-top: 6vw;
 	justify-content: center;
 }
 .mainaddshowmorebutton h2{
 	font-size: 3vw;
-	line-height: 0.5vw;
+	line-height: -0vw;
 	margin-left: 0;
+	margin-top: 3.5vh;
 	text-align: center;
 	color: var(--color4);}
 
@@ -280,7 +283,7 @@ nav ul li{
 	text-align: left;
 }
 .newsletterbanner p{
-	font-size: 2.5vw;
+	font-size: 1.5vw;
 	grid-column: 2;
 	grid-row: 1;
 	padding-top: 2vh;
