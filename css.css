@@ -454,15 +454,15 @@ nav ul li{
 .showmore{
 	color: white;
 	text-align: center;
-	display: inline-block;
+	display: inline-flex;
 	width: 20vw;
 	height: 6vh;
 	line-height: 0;
 	margin-top: 1.5vh;
 	grid-row: 6;
 	background-color: black;
-   align-content: center;
-    align-self: center;
+
+   justify-content: center;
 }
 
 .showmore>h2{
