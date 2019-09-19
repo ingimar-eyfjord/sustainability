@@ -542,10 +542,37 @@ text-shadow: 1px 1px black;
 .categorycheckbox{
 	grid-row: 2;
 	grid-column: 1;
-	width: 20vw;
-	height: 10vh;
+	width: 15vw;
+	height: 8vh;
 	margin: 1em;
+	transform: translateX(1vw);}
+
+.categorycheckbox img{
+	width: 0.5vw;
+	height: auto;
+	transform: translate(5vw, -4.5vh);
 }
+.categorycheckbox:hover{
+	cursor: pointer;
+}
+.checkbox-dropdowndisplaynone{
+	display: none;
+}
+.checkbox-dropdown{
+	animation: dropdown 1s forwards;
+	display: flex;
+	justify-content: space-around;
+}
+@keyframes dropdown{
+	from{
+		opacity: 0;
+		transform: translateY(-5vh)
+	}
+	to{
+		transform: translateY(0vh)
+	}
+}
+
 .container {
   overflow: hidden;
 }

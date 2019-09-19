@@ -63,6 +63,14 @@ function showmore(event){
 //  });
 //}
 
+function dropdown() {
+  var x = document.querySelector(".checkbox-dropdowndisplaynone");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");

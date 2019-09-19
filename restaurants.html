@@ -17,10 +17,14 @@
 		<section class="searchbar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Places.." title="Type in a name"></section>
 	<section class="pagebannerimage"><img src="media/slideshow/restaurant.jpeg" width="1920" height="1080" alt=""/></section>
 	<section id="categorycheckbox" class="categorycheckbox">
+		<h2 onClick="dropdown()"> Filter by</h2>
+		<img onClick="dropdown()" class="arrow" src="media/icons/arrow.png" width="101" height="191" alt=""/>
+		<section class="checkbox-dropdowndisplaynone">
+		<section class="checkbox-dropdown">
 	<input class="all" type="checkbox" onchange="change()" name="all">Show All<br>
 	<input class="btn" type="checkbox" onchange="change()" name="vegan">Vegan<br>
 	<input  class="btn" type="checkbox" onchange="change()" name="raw">Raw<br>
-	<input class="btn"  type="checkbox" onchange="change()" name="organic">Organic<br></section>
+	<input class="btn"  type="checkbox" onchange="change()" name="organic">Organic<br></section></section></section>
 
 		<article class="showclientcards restaurants">
 
@@ -30,7 +34,7 @@
 		
 		<template>
 			
-			<div class="clientcardfilter">
+		<div class="clientcardfilter">
 	<section class="clientcard">
     <div class="clientlogo"><img width="400" height="400" alt=""/> </div>
 	<h2 class="clientname">42 RAW</h2>

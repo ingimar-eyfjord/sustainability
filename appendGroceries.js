@@ -14,7 +14,6 @@ function showData(data){
 function showName(nameData){
 	const template = document.querySelector("template").content;
 	const copy = template.cloneNode(true);
-	console.log(nameData)
 	copy.querySelector(".clientname").textContent=nameData.gsx$name.$t;
 	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
 //	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
