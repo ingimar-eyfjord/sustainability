@@ -10,6 +10,32 @@ function getData() {
   fetch(link)
     .then(res => res.json())
     .then(showData);}
+//
+//	function  initMap(){
+//	var location = {lat: -25.363, lng: 131.044};
+//	var map = new google.maps.Map(document.getElementById("map"),{
+//		zoom: 4,
+//		center: location
+//	});
+//	var marker = new google.maps.Marker({
+//		position: location, 
+//		map: map
+//	});
+//}
+	
+function  initMap(){
+
+	var location = {lat: 55.6761, lng: 12.5683};
+	var map = new google.maps.Map(document.getElementById("map"),{
+		zoom: 12,
+		center: location
+	});
+	var marker = new google.maps.Marker({
+		position: location, 
+		map: map
+	});
+}
+
 
 function showData(data){
 	const myArray = data.feed.entry;
@@ -19,10 +45,14 @@ function showName(nameData){
 	const template = document.querySelector("template").content;
 	const copy = template.cloneNode(true);	
 	copy.querySelector(".clientnamefullpage").textContent=nameData.gsx$name.$t;
+	
 	copy.querySelector(".clientshortdescription p").textContent=nameData.gsx$type.$t;
 	copy.querySelector(".clientfullLongdescription").textContent=nameData.gsx$longdescription.$t;
 	copy.querySelector(".clientbannarimage img").src = `media/clientlandingpageimage/${nameData.gsx$clientbanners.$t}.png`;
+	copy.querySelector(".adresses p").textContent=nameData.gsx$adress.$t;
 	
+	
+
 	
 		function vegan() {
     if (nameData.gsx$vegan.$t === "1") {

@@ -545,7 +545,6 @@ text-shadow: 1px 1px black;
 	width: 20vw;
 	height: 10vh;
 	margin: 1em;
-	background-color: orange;
 }
 .container {
   overflow: hidden;
@@ -681,8 +680,6 @@ footer ul{
 	height: auto;
 }
 #map{
-	width:20vw;
-	height: 20vw;
 	grid-column: 5;
 	grid-row:3;
 	margin-right: 10em;
@@ -697,7 +694,7 @@ footer ul{
 	position: relative;
 	display:grid;
 	grid-template-columns: 10vw 30vw 10vw 40vw 10vw;
-	grid-template-rows: 25vh 25vh 20vh 20vh 25vh;
+	grid-template-rows: 25vh 25vh 20vh 20vh 15vh 25vh 25vh;
 }
 
 .clientbannarimage{
@@ -706,6 +703,7 @@ footer ul{
 	overflow: hidden;
 	grid-row: span 2;
 	grid-column: span 4;
+	margin-bottom: 5vh;
 }
 .clientbannarimage img{
 	height: auto;
@@ -717,7 +715,8 @@ footer ul{
 	grid-row: 3;
 	grid-column: 2;
 	font-size: 4vw;
-	padding: 0;	
+	padding: 0;
+	margin-top: 0;
 }
 .clientshortstarsicon{text-align: left;
 	grid-row: 4;
@@ -753,7 +752,7 @@ max-width: 20vw;
 	grid-row-start: 3;
 	grid-row-end: span 4;
 	font-size: 1.5vw;
-	margin-top: 0.8vw;
+	margin-top: 1vh;
 	font-family: var(--primary-font);
 }
 .clientfullLongdescription p{
@@ -778,31 +777,47 @@ max-width: 20vw;
 	text-align: center;
 	color: var(--color4);
 }
-.maps{
+.map{
 	width: 40vw;
-	height: 50vh;
-	display: block;
-	background-color: blue;
+	height: 25vh;
 	grid-row: 6;
+	padding-top: 10vh;
+	position: absolute;
+	left: 0;
+	margin-top: 115vh;
+	z-index: 100;
+	
 }
 .adresses{
 	width: 60vw;
 	height: 50vh;
-	display: block;
 	background-color: var(--color2);
 	grid-row: 6;
 	grid-column:3;
 	grid-column-end: 7;
+	display: grid;
+	grid-template-columns: 10vw 5vw 30vw;
+	grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+	padding-top: 5vh;
+	margin-top: 10vh;
 }
 .adresses p{
-	text-align: center;
 	font-size: 2vw;
+	grid-column: 3;
+	margin-top: 0;
+	margin-left: 0;
+}
+.adresses img{
+	height: 2vw;
+	width: auto;
+	grid-column: 2;
+	margin-right: 2vw;
+	justify-self:end;
 }
 .reviewsaboutplace{
 	width: 100vw;
 	height: 30vh;
 	display: block;
-	background-color: white;
-	grid-row: 7;
-	
+	position: absolute;
+	background-color: white;	
 }

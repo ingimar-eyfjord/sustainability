@@ -16,11 +16,12 @@
 
 <div class="pagelayout">
 	
+	<div id="map" class="map"></div>
 	</div>
 	<template>
 	
-	<div class="showclientfullinfo">
-	<div class="clientbannarimage"><img width="1600" height="900" alt=""/></div>
+		<div class="showclientfullinfo">
+	<div class="clientbannarimage"><img height="900" alt=""/></div>
 	<h2 class="clientnamefullpage">42Raw</h2>
   	<div class="clientshortstarsicon">
 	<div class="clientshortdescription"><p>Raw Vegan Restaurant</p></div>
@@ -35,21 +36,21 @@
 	</div>
 	<div class="clientfullLongdescription"><p>42Raw er et koncept med fokus på plantebaseret, vegansk og glutenfri mad - prøv vores acai bowl, brunch, sandwich, salater, burger, kager og meget mere.</p></div>
 	<div class="visitwebpage"><h2>Visit our website</h2></div>
-	<div class="maps"></div>
+	
 	<div class="adresses">
-	<p>Hlmstorvet 23 ushfusdhfsudh</p>
-	<p>Hlmstorvet 23 ushfusdhfsudh</p>
-	<p>Hlmstorvet 23 ushfusdhfsudh</p>
-	<p>Hlmstorvet 23 ushfusdhfsudh</p>
+	<img class="ladingpagelocation" src="media/icons/locationBlack.png" width="298" height="431" alt=""/><p>Hlmstorvet 23 ushfusdhfsudh</p>
 	</div>
-		<div class="reviewsaboutplace"></div>
+		
 		</div>
+		<div class="reviewsaboutplace"></div>
 	
 	
 </template>
 	
 	<script type="text/javascript" src="clientpage.js"></script>	
 	<script type="text/javascript" src="js.js"></script>
+	<script type="text/javascript" src="loaddash.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIt4h7e-Bhxw0z7QKVQW34jqcb8lMW8r0&callback=initMap"> </script>
 	</body>
 	
 </html>
