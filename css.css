@@ -390,6 +390,7 @@ nav ul li{
 	line-height: 0vh;
 	padding-left: 0.3vh;
     padding-top: 2vh;
+    margin-left: 0.5vh;
 }
 .clientshortinfo{
 	position: absolute;
@@ -404,7 +405,7 @@ nav ul li{
 .clientlocationMaps{
 	position: absolute;
 	grid-column: 2;
-	grid-row: 2; 
+	grid-row: 3;
 	margin-top: 0.5em;
 	margin-right: 1.5em;
 	justify-self:end;
@@ -413,10 +414,12 @@ nav ul li{
 	position: absolute;
 	width: 1em;
 	height: auto;
+/*
    margin-top: 7vh;
     margin-bottom: 2vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
+*/
 }
 .clientlocation{
 	position: absolute;
@@ -427,19 +430,19 @@ nav ul li{
 	margin-right: 1vw;
 	justify-self:end;
     font-size: 1.5vw;
-    margin-top: 5vh;
+    margin-top: 4vh;
     padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
+    padding-bottom: 1vh;
 }
 .stars{
 	position: absolute;
 	grid-column: 2;
 	grid-row:4;
 	line-height: 0em;
-	margin-top: 5vh;
+	margin-top: 4vh;
 	margin-right:1vw;
 	justify-self:end;
-    padding-top: 2vh;
+    padding-top: 1vh;
 
 }
 .stars img{
