@@ -353,8 +353,8 @@ nav ul li{
 .clientcardfilter{
 }
 .clientcard{
-	margin: 1em;
-	width: 20vw;
+	margin: 2vh;
+	width: 25vw;
 	height: auto;
 	background-color: lightblue;
 	display: grid;
@@ -378,7 +378,7 @@ nav ul li{
     max-height: 20vw;
 }
 .clientlogo img{
-	width: 20vw;
+	width: 25vw;
 	height: auto;
 }
 .clientname{
@@ -387,8 +387,9 @@ nav ul li{
 	grid-column-end: 3;
 	grid-row: 2;
 	font-size: 2vw;
-	line-height: 0em;
-	padding-left: 0.3em;
+	line-height: 0vh;
+	padding-left: 0.3vh;
+    padding-top: 2vh;
 }
 .clientshortinfo{
 	position: absolute;
@@ -412,6 +413,10 @@ nav ul li{
 	position: absolute;
 	width: 1em;
 	height: auto;
+   margin-top: 7vh;
+    margin-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 .clientlocation{
 	position: absolute;
@@ -419,18 +424,23 @@ nav ul li{
 	grid-column: 2;
 	grid-row: 3;
 	white-space:normal;
-	margin-right: 0.5em;
+	margin-right: 1vw;
 	justify-self:end;
     font-size: 1.5vw;
+    margin-top: 5vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
 }
 .stars{
 	position: absolute;
 	grid-column: 2;
 	grid-row:4;
 	line-height: 0em;
-	margin-top: 0.5em;
-	margin-right:0.5em;
+	margin-top: 5vh;
+	margin-right:1vw;
 	justify-self:end;
+    padding-top: 2vh;
+
 }
 .stars img{
 	width: 5vw;
@@ -455,7 +465,7 @@ nav ul li{
 	color: white;
 	text-align: center;
 	display: inline-flex;
-	width: 20vw;
+	width: 25vw;
 	height: 6vh;
 	line-height: 0;
 	margin-top: 1.5vh;
