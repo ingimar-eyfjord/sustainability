@@ -92,4 +92,8 @@ function showName(nameData){
 		if(nameData.gsx$id.$t === id)
 		document.querySelector(".pagelayout").appendChild(copy);
 	}
-	appendInrestaurants()}// JavaScript Document
+	appendInrestaurants()}
+
+
+
+// JavaScript Document
