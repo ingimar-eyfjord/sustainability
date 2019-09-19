@@ -343,6 +343,7 @@ nav ul li{
 	height: 4vh;
 	background-color: white;
 	border-radius: 20em;
+	border-style: none;
 }
 .displaynone{
 	display: none;
@@ -351,6 +352,7 @@ nav ul li{
 
 .showclientcards{
 	grid-row: 3;
+	width: 100vw;
 	grid-column: span 4;
 	display: flex;
 	flex-wrap: wrap;
@@ -364,13 +366,46 @@ nav ul li{
 	margin: 1em;
 	width: 20vw;
 	height: auto;
-	background-color: var(--color1);
+	background-color: black;
+	color: white;
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows:0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+	grid-template-rows:0.25fr 0.25fr 0.20fr 0.35fr 0fr;
 	
 }
+.addressandstars{
+	grid-row:4;
+	grid-column: 1;
+	
+	width: 20vw;
+	height: 20vh;
+	display: flex;
+	flex-flow: column;
+	position: absolute;
+}
+.clientlocation{
+	
+	display: block;
+	grid-column: 1;
+	grid-row: 4;
+	white-space:normal;
+	margin-right: 0.5em;
+	justify-self:start;
+    font-size: 1.5vw;
+	padding-left: 0.3vw;
+	line-height: 0;
+}
+.stars{
+	margin-right:0.5em;
+	justify-self:start;
+	padding-left: 0.3vw;
+}
+.stars img{
+	width: 5vw;
+	height: auto;
+}
+
 /*
 .clientcardShowmore{
 	width: 20vw;
@@ -396,7 +431,7 @@ nav ul li{
 	grid-row: 2;
 	font-size: 2vw;
 	line-height: 0em;
-	padding-left: 0.3em;
+	padding-left: 0.3vw;
 }
 .clientshortinfo{
 	position: absolute;
@@ -405,7 +440,7 @@ nav ul li{
 	grid-column-end: 3;
 	grid-row: 3;
 	font-size: 1.5vw;
-	padding-left: 0.4em;
+	padding-left: 0.3vw;
 	line-height: 0em;
 }
 .clientlocationMaps{
@@ -415,33 +450,11 @@ nav ul li{
 	margin-top: 0.5em;
 	margin-right: 1.5em;
 	justify-self:end;
+	margin-bottom: 5vh;
 }
 .clientlocationMaps img{
 	position: absolute;
 	width: 1em;
-	height: auto;
-}
-.clientlocation{
-	position: absolute;
-	display: block;
-	grid-column: 2;
-	grid-row: 3;
-	white-space:normal;
-	margin-right: 0.5em;
-	justify-self:end;
-    font-size: 1.5vw;
-}
-.stars{
-	position: absolute;
-	grid-column: 2;
-	grid-row:4;
-	line-height: 0em;
-	margin-top: 0.5em;
-	margin-right:0.5em;
-	justify-self:end;
-}
-.stars img{
-	width: 5vw;
 	height: auto;
 }
 .iconidentifiers{
@@ -460,15 +473,16 @@ nav ul li{
     max-height: 5vw;
 }
 .showmore{
-	color: white;
+	color: var(--color3);
 	text-align: center;
 	display: inline-flex;
 	width: 20vw;
 	height: 6vh;
 	line-height: 0;
 	margin-top: 1.5vh;
-	grid-row: 6;
-	background-color: black;
+	grid-row: 100;
+	margin-bottom: -1vw;
+	background-color: var(--color5);
    justify-content: center;
 }
 
@@ -476,6 +490,7 @@ nav ul li{
     font-size: 3.5vw;
     align-self: center;
     vertical-align: middle;
+	background-color: var(--color4);
 }
 
 /** slider */
@@ -563,12 +578,13 @@ text-shadow: 1px 1px black;
 	width: 25vw;
 	height: 15vh;
 	margin: 1em;
-	transform: translateX(1vw);}
+	transform: tranclslateX(1vw);}
 
 .categorycheckbox img{
-	width: 0.5vw;
+	width: 0.3vw;
 	height: auto;
-	transform: translate(6vw, -5.5vh);
+	margin-left: 0.3vw;
+	
 }
 .categorycheckbox:hover{
 	cursor: pointer;
