@@ -17,8 +17,13 @@ function showName(nameData){
 	const copy = template.cloneNode(true);
 	console.log(nameData)
 	copy.querySelector(".clientname").textContent=nameData.gsx$name.$t;
+	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
 //	copy.querySelector(".clientlocation").textContent=nameData.gsx$adress.$t;
 	copy.querySelector(".clientlogo img").src = `media/clientslogos/${nameData.gsx$imgname.$t}.jpg`;
+	copy.querySelector(".clientshortinfo").textContent=nameData.gsx$type.$t;
+	
+	var a = copy.querySelector(".showmore a"); 
+	a.href = `showProduct.html?id=${nameData.gsx$id.$t}`;
 	
 	function vegan() {
     if (nameData.gsx$vegan.$t === "1") {

@@ -11,6 +11,7 @@
 	
 /* --primary-font: 'Rajdhani', sans-serif;*/
 --primary-font:  'Tajawal', sans-serif;
+--primary-gont-extraThick: 'Tajawal 700', sans-serif;
 --secondary-font: 'Rajdhani', sans-serif;
 --fontsizeongraphics: 3vw;
 	--color1:#ABC3DA;
@@ -26,9 +27,13 @@ background-color: var(--color5);}
 h2{font-family: var(--secondary-font);}
 
 p{ font-family: var(--secondary-font);}
-.slider p{font-family: var(--secondary-font);}
+.slider p{font-family: var(--primary-gont-extraThick);
+font-size: 5em;}
 a{color:white;
 	text-decoration: none;
+}
+li{
+	font-family: var(--primary-font)
 }
 	
 nav{position: absolute;
@@ -255,7 +260,7 @@ nav ul li{
 .newsletterbanner{
 	grid-row: 6;
 	width: 100vw;
-	height: 60vh;
+	height: 40vh;
 	display: grid;
 	grid-template-columns: 50vw 50vw;
 	grid-template-rows: 15vh 15vh 15vh 15vh;
@@ -266,7 +271,7 @@ nav ul li{
 }
 .newsletteremail{
 	grid-column: 2;
-	grid-row: 3;
+	grid-row: 2;
 	justify-self:center;
 	padding-top: 2vh;
 }
@@ -295,7 +300,7 @@ nav ul li{
 	justify-content: center;
 }
 .submitemail{
-	grid-row: 4;
+	grid-row: 3;
 	grid-column: 2;
 	text-align: center;
 	width: 20vw;
@@ -356,7 +361,7 @@ nav ul li{
 	margin: 1em;
 	width: 20vw;
 	height: auto;
-	background-color: lightblue;
+	background-color: var(--color1);
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
@@ -461,7 +466,6 @@ nav ul li{
 	margin-top: 1.5vh;
 	grid-row: 6;
 	background-color: black;
-
    justify-content: center;
 }
 
@@ -469,8 +473,6 @@ nav ul li{
     font-size: 3.5vw;
     align-self: center;
     vertical-align: middle;
-
-
 }
 
 /** slider */
@@ -538,9 +540,9 @@ slide p {
  display: inline-block;
 	margin-top: 40vh;
 	margin-left: 5vw;
- color:black;
-	background-color: white;
-text-shadow: 1px 1px whitesmoke;
+ color:white;
+font-weight: bold;
+text-shadow: 1px 1px black;
 }
 
 @keyframes slide {
@@ -555,11 +557,37 @@ text-shadow: 1px 1px whitesmoke;
 .categorycheckbox{
 	grid-row: 2;
 	grid-column: 1;
-	width: 20vw;
-	height: 10vh;
+	width: 15vw;
+	height: 8vh;
 	margin: 1em;
-	background-color: orange;
+	transform: translateX(1vw);}
+
+.categorycheckbox img{
+	width: 0.5vw;
+	height: auto;
+	transform: translate(5vw, -4.5vh);
 }
+.categorycheckbox:hover{
+	cursor: pointer;
+}
+.checkbox-dropdowndisplaynone{
+	display: none;
+}
+.checkbox-dropdown{
+	animation: dropdown 1s forwards;
+	display: flex;
+	justify-content: space-around;
+}
+@keyframes dropdown{
+	from{
+		opacity: 0;
+		transform: translateY(-5vh)
+	}
+	to{
+		transform: translateY(0vh)
+	}
+}
+
 .container {
   overflow: hidden;
 }
@@ -698,10 +726,144 @@ footer ul{
 	height: auto;
 }
 #map{
-	width:20vw;
-	height: 20vw;
 	grid-column: 5;
 	grid-row:3;
 	margin-right: 10em;
 	position: absolute;
+}
+
+/* client landing page*/
+
+.showclientfullinfo{
+	width: 100vw;
+	height: 150vh;
+	position: relative;
+	display:grid;
+	grid-template-columns: 10vw 30vw 10vw 40vw 10vw;
+	grid-template-rows: 25vh 25vh 20vh 20vh 15vh 25vh 25vh;
+}
+
+.clientbannarimage{
+	height: 50vh;
+	width: 100vw;
+	overflow: hidden;
+	grid-row: span 2;
+	grid-column: span 4;
+	margin-bottom: 5vh;
+}
+.clientbannarimage img{
+	height: auto;
+	width: 100vw;
+	transform: translateY(-40vh)
+}
+.clientnamefullpage{
+	text-align: left;
+	grid-row: 3;
+	grid-column: 2;
+	font-size: 4vw;
+	padding: 0;
+	margin-top: 0;
+}
+.clientshortstarsicon{text-align: left;
+	grid-row: 4;
+	grid-column: 2;
+	display: flex;
+	flex-flow: column;}
+
+.clientshortdescription{	
+	font-size: 1.5vw;
+}
+.clientstars{
+max-width: 20vw;
+	height: auto;
+}
+.iconidentifyersfull{
+	margin-top: 5vh;
+	max-width: 15vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+}
+.iconidentifyersfull img{
+	width: auto;
+	height: 3vw;
+	max-width: 5vw;
+
+}
+.clientfullLongdescription{
+	grid-column: 4;
+	grid-row-start: 3;
+	grid-row-end: span 4;
+	font-size: 1.5vw;
+	margin-top: 1vh;
+	font-family: var(--primary-font);
+}
+.clientfullLongdescription p{
+	font-family: var(--primary-font);
+}
+.visitwebpage{
+	text-align: center;
+	width: 20vw;
+	height: 10vh;
+	color: black;
+	background-color: white;
+	grid-row:5;
+	grid-column: 4;
+	border-radius: 20vw;
+	justify-self:center;
+	display: flex;
+	justify-content: center;
+}
+.visitwebpage h2{
+	font-size: 2vw;
+	margin-right: 0;
+	text-align: center;
+	color: var(--color4);
+}
+.map{
+	width: 40vw;
+	height: 25vh;
+	grid-row: 6;
+	padding-top: 10vh;
+	position: absolute;
+	left: 0;
+	margin-top: 115vh;
+	z-index: 100;
+	
+}
+.adresses{
+	width: 60vw;
+	height: 50vh;
+	background-color: var(--color2);
+	grid-row: 6;
+	grid-column:3;
+	grid-column-end: 7;
+	display: grid;
+	grid-template-columns: 10vw 5vw 30vw;
+	grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+	padding-top: 5vh;
+	margin-top: 10vh;
+}
+.adresses p{
+	font-size: 2vw;
+	grid-column: 3;
+	margin-top: 0;
+	margin-left: 0;
+}
+.adresses img{
+	height: 2vw;
+	width: auto;
+	grid-column: 2;
+	margin-right: 2vw;
+	justify-self:end;
+}
+.reviewsaboutplace{
+	width: 100vw;
+	height: 30vh;
+	display: block;
+	position: absolute;
+	background-color: white;	
 }
