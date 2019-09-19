@@ -21,7 +21,7 @@ function showName(nameData){
 	copy.querySelector(".clientshortinfo").textContent=nameData.gsx$type.$t;
 	
 	var a = copy.querySelector(".showmore a"); 
-	a.href = `showProduct.html?id=${nameData.gsx$id.$t}`;
+	a.href = `showProduct.html?id=${nameData.gsx$id.$t}&lat=${nameData.gsx$lat.$t}&lng=${nameData.gsx$lng.$t}`;
 	
 	function vegan() {
     if (nameData.gsx$vegan.$t === "1") {

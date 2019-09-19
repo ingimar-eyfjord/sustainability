@@ -5,6 +5,8 @@
 <title>Untitled Document</title>
 </head>
 	 <link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="slider_files/glider.min.css">
 <body>
 	<nav>
 		<ul>
@@ -18,10 +20,53 @@
 	
 	<div id="map" class="map"></div>
 	</div>
+	<div class="reviewsaboutplace">
+		
+		<div class="glider-contain multiple">
+		<h2 class="reviewfont">Customer Reviews</h2>
+		
+	<button class="glider-prev">
+		<i class="fa fa-chevron-left"></i>
+		</button>
+		
+		<div class="glider">	
+			
+
+			
+			 <figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure> 
+			
+			 <figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure>
+			
+			<figure><blockquote>"This is my awesome little testimonial about customer service here"</blockquote><figcaption>Micheal Burnham</figcaption></figure> 
+			
+		</div>
+		
+			<button class="glider-next">
+		<i class="fa fa-chevron-right"></i>
+		</button>
+		<div id="dots" class="glider-dots"></div>
+		
+		</div></div>
 	<template>
 	
 		<div class="showclientfullinfo">
+			<div class="clientbannarimagegradient">
 	<div class="clientbannarimage"><img height="900" alt=""/></div>
+				</div>
 	<h2 class="clientnamefullpage">42Raw</h2>
   	<div class="clientshortstarsicon">
 	<div class="clientshortdescription"><p>Raw Vegan Restaurant</p></div>
@@ -42,15 +87,80 @@
 	</div>
 		
 		</div>
-		<div class="reviewsaboutplace"></div>
+		
 	
 	
 </template>
 	
+	
+	
+	
+	<footer>
+			<div class="footersection">
+		<h2 class="footerheader">
+			Customers
+			</h2>
+			<ul>
+			<li>Questions &amp; Answers</li>
+			<li>Something else</li>
+			<li>Another Link</li>
+			</ul>
+				</div>
+			<div class="footersection">
+				
+			<h2 class="footerheader">
+			Corporate
+			</h2>
+			<ul>
+			<li>Terms &amp; Conditions</li>
+			<li>Privacy Policy</li>
+			<li>Cookies</li>
+			</ul>
+			</div>
+			<div class="footersection">
+			<h2 class="footerheader">
+			Why us?
+			</h2>
+			<ul>
+			<li>About Us</li>
+			<li>Our Vision</li>
+			<li>Become a partner</li>
+			</ul>
+			</div>
+			<div class="footersection">
+			<h2 class="footerheader">
+			Contact
+			</h2>
+			<ul>
+			<li>Contact Form</li>
+			</ul>
+				</div>
+		<div class="socialmediaicons">
+		  <img src="media/icons/instagram.png" width="246" height="246" alt=""/> 
+		  <img src="media/icons/twitter.png" width="307" height="249" alt=""/>
+		  <img src="media/icons/facebook.png" width="143" height="251" alt=""/>
+		  <img src="media/icons/website.png" width="251" height="251" alt=""/> </div>
+	  </footer>
+	
+	
 	<script type="text/javascript" src="clientpage.js"></script>	
 	<script type="text/javascript" src="js.js"></script>
-	<script type="text/javascript" src="loaddash.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIt4h7e-Bhxw0z7QKVQW34jqcb8lMW8r0&callback=initMap"> </script>
+	
+		<script src="slider_files/glider.min.js"></script>
+		<script> 
+		
+	new Glider(document.querySelector('.glider'),{
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		draggable: true,
+		dots: "#dots",
+		arrows:{
+		prev: '.glider-prev',
+		next: '.glider-next'
+	}
+});
+	</script>
 	</body>
 	
 </html>

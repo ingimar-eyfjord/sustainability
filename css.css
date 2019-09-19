@@ -20,15 +20,17 @@
 	--color4:#7C6A66;
 	--color5:#A9B2B0;
 }
+
 body{padding: 0;
 	margin:0;
-background-color: var(--color5);}
+background-color: var(--color5);
+overflow-x:hidden}
 
 h2{font-family: var(--secondary-font);}
 
 p{ font-family: var(--secondary-font);}
 .slider p{font-family: var(--primary-gont-extraThick);
-font-size: 5em;}
+font-size: 4vw;}
 a{color:white;
 	text-decoration: none;
 }
@@ -336,6 +338,7 @@ nav ul li{
 	grid-row: 2;
 	grid-column: 2;
 	margin: 1em;
+	margin-top: 6vh;
 	
 }
 #myInput{
@@ -761,7 +764,7 @@ footer ul{
 	position: relative;
 	display:grid;
 	grid-template-columns: 10vw 30vw 10vw 40vw 10vw;
-	grid-template-rows: 25vh 25vh 20vh 20vh 15vh 25vh 25vh;
+	grid-template-rows: 25vh 25vh 10vh 20vh 20vh 15vh 25vh 25vh;
 }
 
 .clientbannarimage{
@@ -772,21 +775,28 @@ footer ul{
 	grid-column: span 4;
 	margin-bottom: 5vh;
 }
+.clientbannarimagegradient{
+	width: 100vw;
+	height: 50vh;
+	background-image: linear-gradient(white, transparent);
+}
 .clientbannarimage img{
 	height: auto;
 	width: 100vw;
-	transform: translateY(-40vh)
+	transform: translateY(-40vh);
+	
 }
 .clientnamefullpage{
 	text-align: left;
-	grid-row: 3;
+	grid-row: 4;
 	grid-column: 2;
 	font-size: 4vw;
 	padding: 0;
 	margin-top: 0;
 }
-.clientshortstarsicon{text-align: left;
-	grid-row: 4;
+.clientshortstarsicon{
+	text-align: left;
+	grid-row: 5;
 	grid-column: 2;
 	display: flex;
 	flex-flow: column;}
@@ -816,8 +826,8 @@ max-width: 20vw;
 }
 .clientfullLongdescription{
 	grid-column: 4;
-	grid-row-start: 3;
-	grid-row-end: span 4;
+	grid-row-start: 4;
+	grid-row-end: span 5;
 	font-size: 1.5vw;
 	margin-top: 1vh;
 	font-family: var(--primary-font);
@@ -831,7 +841,7 @@ max-width: 20vw;
 	height: 10vh;
 	color: black;
 	background-color: white;
-	grid-row:5;
+	grid-row:6;
 	grid-column: 4;
 	border-radius: 20vw;
 	justify-self:center;
@@ -847,19 +857,19 @@ max-width: 20vw;
 .map{
 	width: 40vw;
 	height: 25vh;
-	grid-row: 6;
+	grid-row: 7;
 	padding-top: 10vh;
 	position: absolute;
 	left: 0;
-	margin-top: 115vh;
+	margin-top: 125vh;
 	z-index: 100;
 	
 }
 .adresses{
 	width: 60vw;
-	height: 50vh;
+	height: 30vh;
 	background-color: var(--color2);
-	grid-row: 6;
+	grid-row: 7;
 	grid-column:3;
 	grid-column-end: 7;
 	display: grid;
@@ -883,8 +893,49 @@ max-width: 20vw;
 }
 .reviewsaboutplace{
 	width: 100vw;
-	height: 30vh;
+	margin-top: 10vh;
+	height: 45vh;
 	display: block;
-	position: absolute;
-	background-color: white;	
+	z-index: 1000;
+	overflow-x:hidden
+}
+.glider-contain>h2{
+	font-family: var(--primary-font);
+	font-size: 2vw;
+	line-height: 3vh;
+	margin-left: 5vw;
+}
+.glider-contain{
+	display: block;
+	width: 40vw;
+	height: auto;
+	overflow-x:hidden;}
+
+figure{
+	background-color: white;
+	display: block;
+	margin: 1.5em;
+	padding:.7em;
+}
+	
+blockquote {
+		padding: .5em;
+		font-size: 1.3em;
+		font-style: italic;
+		text-align: center;
+	}
+figcaption {
+	text-align: center;
+	margin-bottom: 1em;
+	font-size: .9em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: gray;
+}
+
+.glider-next{
+	transform: translate(-4vw, 7vh);
+}
+.glider-prev{
+	transform: translate(4vw, 7vh);
 }
