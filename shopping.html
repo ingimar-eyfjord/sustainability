@@ -17,13 +17,21 @@
 	<section class="categorysites">
 		<section class="pagebannerimage"><img src="media/slideshow/furniture.jpg" width="1368" height="945" alt=""/></section>
 		<section class="searchbar"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Places.." title="Type in a name"></section>
-	<section id="categorycheckbox" class="categorycheckbox">
-	<input class="btn btnshowall" type="checkbox" onClick="filterselection('all')" name="All">Show All<br>
-	<input class="btn" type="checkbox" onClick="filterselection('vegan')" name="Vegan">Zero Waste<br>
-	<input  class="btn" type="checkbox" onClick="filterselection('raw')" name="Raw">Organic<br>
-	<input class="btn"  type="checkbox" onClick="filterselection('organic')" name="Organic">Vegan<br>
-		<input class="btn"  type="checkbox" onClick="filterselection('organic')" name="Organic">Non Polluting<br>
-		</section>
+		<section id="categorycheckbox" class="categorycheckbox">
+		<h2 onClick="dropdown()"> Filter by</h2>
+		<img onClick="dropdown()" class="arrow" src="media/icons/arrow.png" width="101" height="191" alt=""/>
+		<section class="checkbox-dropdowndisplaynone">
+		<section class="checkbox-dropdown">
+	<input class="all" type="checkbox" onchange="change()" name="all">Show All<br>
+	<input class="btn" type="checkbox" onchange="change()" name="vegan">Vegan<br>
+	<input  class="btn" type="checkbox" onchange="change()" name="raw">Raw<br>
+	<input class="btn"  type="checkbox" onchange="change()" name="organic">Organic<br>
+		
+		<input class="btn"  type="checkbox" onchange="change()" name="organic">Non Polluting<br>
+<input class="btn"  type="checkbox" onchange="change()" name="organic">Recycled<br>
+<input class="btn"  type="checkbox" onchange="change()" name="organic">Zero Waste<br>
+<input class="btn"  type="checkbox" onchange="change()" name="organic">Upcycled<br></section></section></section>
+		
 	<article class="showclientcards shopping">
 
 </article>
