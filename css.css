@@ -347,6 +347,7 @@ nav ul li{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+
 	
 }
 .clientcardfilter{
@@ -359,7 +360,7 @@ nav ul li{
 	display: grid;
 	position: relative;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 2fr 0.25fr 0.25fr 0.25fr 0.25fr;
+	grid-template-rows:0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
 	
 }
 /*
@@ -374,6 +375,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: span 2;
 	grid-row: 1;
+    max-height: 20vw;
 }
 .clientlogo img{
 	width: 20vw;
@@ -384,7 +386,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row: 2;
-	font-size: 2em;
+	font-size: 2vw;
 	line-height: 0em;
 	padding-left: 0.3em;
 }
@@ -394,7 +396,7 @@ nav ul li{
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row: 3;
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	padding-left: 0.4em;
 	line-height: 0em;
 }
@@ -419,6 +421,7 @@ nav ul li{
 	white-space:normal;
 	margin-right: 0.5em;
 	justify-self:end;
+    font-size: 1.5vw;
 }
 .stars{
 	position: absolute;
@@ -441,21 +444,33 @@ nav ul li{
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+
 }
 .iconidentifiers img{
-	height: 5em;
+	height: 5vh;
 	width:auto;
+    max-height: 5vw;
 }
 .showmore{
 	color: white;
 	text-align: center;
-	display: block;
+	display: inline-block;
 	width: 20vw;
-	height: 5vh;
+	height: 6vh;
 	line-height: 0;
-	margin-top: 1em;
+	margin-top: 1.5vh;
 	grid-row: 6;
 	background-color: black;
+   align-content: center;
+    align-self: center;
+}
+
+.showmore>h2{
+    font-size: 3.5vw;
+    align-self: center;
+    vertical-align: middle;
+
+
 }
 
 /** slider */
